@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+match ':controller(/:action(/:id(.:format)))'
+resources :users
+resources :levels
+  #resource :users do
+  #  member do
+  #    get :userdate
+      #post :nextlevel
+  #  end
+  #end
+
+  #resource :levels do
+  #  member do
+  #    post :init
+  #    get :gelleveldata
+  #  end
+  #end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
