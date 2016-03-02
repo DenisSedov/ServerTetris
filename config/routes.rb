@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
-match ':controller(/:action(/:id(.:format)))'
-resources :users
-resources :levels
-  #resource :users do
-  #  member do
-  #    get :userdate
+#match ':controller(/:action(/:id))'
+#match ':controller(/:action(/:id(.:format)))'
+#match ':controller(/:action)'
+#resources :users
+#resources :levels
+
+  resource :users do
+    member do
+      get :userdata
       #post :nextlevel
-  #  end
-  #end
+    end
+  end
 
   #resource :levels do
   #  member do
