@@ -7,17 +7,16 @@ Rails.application.routes.draw do
 
   resource :users do
     member do
+      get :setdata
       get :userdata
-      #post :nextlevel
     end
   end
 
-  #resource :levels do
-  #  member do
-  #    post :init
-  #    get :gelleveldata
-  #  end
-  #end
+  resource :levels do
+    member do
+      get :leveldata
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
