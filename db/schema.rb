@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 20160227095923) do
     t.datetime "updated_at", null: false
   end
 
+  add_index "levels", ["level"], name: "index_levels_on_level", unique: true, using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "username"
     t.integer  "level"
@@ -31,5 +33,7 @@ ActiveRecord::Schema.define(version: 20160227095923) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
 end

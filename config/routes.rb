@@ -5,6 +5,9 @@ Rails.application.routes.draw do
 #resources :users
 #resources :levels
 
+#root_path -> '/'
+#root_url  -> 'https://fathomless-earth-78839.herokuapp.com/'
+
   resource :users do
     member do
       get :setdata
